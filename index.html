@@ -3,76 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of Mechatronics - Landing Page</title>
+    <title>World of Mechatronics - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="imagenes/Main_Logo.jpeg" alt="World of Mechatronics Logo">
-                <h1>World of Mechatronics</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#mechanical">Mechanical</a></li>
-                <li><a href="#electrical">Electrical</a></li>
-                <li><a href="#control">Control</a></li>
-                <li><a href="#programming">Programming</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#components">Components</a></li>
+        <div class="logo">
+            <img src="path/to/your/logo.jpeg" alt="World of Mechatronics Logo">
+            <h1>World of Mechatronics</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mechanical.html">Mechanical</a></li>
+                <li><a href="electrical.html">Electrical</a></li>
+                <li><a href="control.html">Control</a></li>
+                <li><a href="programming.html">Programming</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="components.html">Components</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Intro Section -->
-    <section id="intro" class="section intro">
-        <div class="content">
-            <h2>Welcome to the World of Mechatronics</h2>
-            <p>Your ultimate guide to the exciting world of mechatronics! Dive into the fundamentals, explore projects, and get started with tools and components.</p>
-        </div>
-        <div class="scroll-down">
-            <a href="#mechanical"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <!-- Mechanical Section -->
-    <section id="mechanical" class="section">
-        <h2>Mechanical Systems</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
-    </section>
-
-    <!-- Electrical Section -->
-    <section id="electrical" class="section">
-        <h2>Electrical Systems</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
-    </section>
-
-    <!-- Control Section -->
-    <section id="control" class="section">
-        <h2>Control Systems</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
-    </section>
-
-    <!-- Programming Section -->
-    <section id="programming" class="section">
-        <h2>Programming</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
-    </section>
-
-    <!-- Tools Section -->
-    <section id="tools" class="section">
-        <h2>Tools</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
-    </section>
-
-    <!-- Components Section -->
-    <section id="components" class="section">
-        <h2>Components</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor et enim interdum fermentum.</p>
+    <!-- Homepage Content -->
+    <section class="content-section">
+        <h2>Welcome to World of Mechatronics</h2>
+        <p>Your ultimate guide to the world of mechatronics. Explore each section to learn more.</p>
     </section>
 
     <!-- Footer -->
@@ -80,6 +38,7 @@
         <p>&copy; 2024 World of Mechatronics. All rights reserved.</p>
     </footer>
 
+    
     <!-- JS for smooth scrolling -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -90,7 +49,6 @@
                 });
             });
         });
-    </script>
-
+</script>
 </body>
 </html>
