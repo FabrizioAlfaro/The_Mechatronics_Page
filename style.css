@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,156 +7,129 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #eaeaea;
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-    color: #00d1b2;
-}
-
-ul {
-    list-style: none;
-}
-
-section {
-    padding: 100px 0;
-    text-align: center;
-    min-height: 100vh;
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
     background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d0d0d;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    z-index: 1000;
+    flex-wrap: wrap;
 }
 
-.navbar .logo {
+/* Logo styling */
+.logo {
     display: flex;
     align-items: center;
 }
 
-.navbar .logo img {
-    width: 50px;
-    height: 50px;
+.logo img {
+    width: 80px;
+    height: auto;
     margin-right: 15px;
 }
 
-.navbar .nav-links {
+.logo h1 {
+    font-size: 28px;
+    color: #00bcd4;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.navbar .nav-links li {
-    list-style: none;
+nav ul li {
+    margin: 0;
 }
 
-.navbar .nav-links a {
-    color: #eaeaea;
-    font-weight: bold;
+nav ul li a {
+    color: #00bcd4;
+    text-decoration: none;
     font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
-    color: #00d1b2;
+nav ul li a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
 }
 
-/* Intro Section */
-.intro {
-    background-image: url('path/to/your/Main_Logo.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Content Section Styles */
+.content-section {
+    padding: 60px 20px;
     text-align: center;
-    color: #fff;
+    background-color: #292929;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
 }
 
-.intro .content {
-    max-width: 800px;
-}
-
-.intro h2 {
-    font-size: 3rem;
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.intro p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    animation: bounce 2s infinite;
-}
-
-.scroll-down a {
-    font-size: 2rem;
-    color: #00d1b2;
-}
-
-/* Sections */
-.section {
-    background-color: #1a1a1a;
-    padding: 100px 20px;
-}
-
-.section h2 {
-    font-size: 2.5rem;
+.content-section h2 {
+    font-size: 32px;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-in-out;
+    color: #00bcd4;
 }
 
-.section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    animation: fadeInUp 1.5s ease-in-out;
+.content-section p {
+    font-size: 18px;
+    color: #ffffff;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #0d0d0d;
-    color: #eaeaea;
-    position: relative;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .content-section p {
+        font-size: 16px;
+    }
 }

@@ -27,28 +27,52 @@
         </nav>
     </header>
 
+
     <!-- Homepage Content -->
-    <section class="content-section">
+    <section class="content-section fade-in">
         <h2>Welcome to World of Mechatronics</h2>
         <p>Your ultimate guide to the world of mechatronics. Explore each section to learn more.</p>
     </section>
+
+   
+    <section class="content-section fade-in">
+        <h2>Welcome to World of Mechatronics</h2>
+        <p>Your ultimate guide to the world of mechatronics. Explore each section to learn more.</p>
+    </section>
+
+    <section class="content-section fade-in">
+        <h2>Welcome to World of Mechatronics</h2>
+        <p>Your ultimate guide to the world of mechatronics. Explore each section to learn more.</p>
+    </section>
+
+
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 World of Mechatronics. All rights reserved.</p>
     </footer>
 
-    
+
     <!-- JS for smooth scrolling -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+<script>
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
         });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in').forEach(element => {
+        observer.observe(element);
+    });
 </script>
 </body>
 </html>
