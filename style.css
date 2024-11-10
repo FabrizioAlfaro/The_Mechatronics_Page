@@ -39,25 +39,43 @@ header {
 }
 
 /* Navigation Styles */
-nav ul {
-    list-style: none;
+.navbar {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-nav ul li {
+/* Reorder the elements */
+.nav-links {
+    order: 1;
+    margin-right: auto; /* Pushes nav-links to the left */
+}
+
+.logo {
+    order: 2;
+}
+
+.search-bar-container {
+    order: 3;
+}
+
+/* Existing nav-links styles */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
     margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
-    color: #00bcd4;
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 500;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #ff5722;
     transform: scale(1.1);
 }
