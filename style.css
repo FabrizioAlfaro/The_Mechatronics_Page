@@ -133,3 +133,14 @@ footer {
         font-size: 16px;
     }
 }
+
+
+.logo {
+    text-align: center; /* Center align logo and text */
+}
+
+.slogan {
+    font-size: 14px; /* Adjust size as needed */
+    color: #666; /* Change color as needed */
+    margin-top: 5px; /* Space between title and slogan */
+}

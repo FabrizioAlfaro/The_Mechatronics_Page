@@ -10,9 +10,15 @@
 
     <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="imagenes/Main_Logo.jpeg" alt="World of Mechatronics Logo">
-            <h1>World of Mechatronics</h1>
+        <div class="header-container">
+            <div class="logo">
+                <img src="imagenes/Main_Logo.jpeg" alt="World of Mechatronics Logo">
+                <div class="title-slogan">
+                    <h1>World of Mechatronics</h1>
+                    <h3 class="slogan">For DIYers</h3>
+                </div>
+            </div>
+
         </div>
         <nav>
             <ul>
@@ -25,6 +31,12 @@
                 <li><a href="components.html">Components</a></li>
             </ul>
         </nav>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Tools Content Section -->
@@ -37,6 +49,27 @@
     <footer>
         <p>&copy; 2024 World of Mechatronics. All rights reserved.</p>
     </footer>
+
+    <script>
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+    
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+    
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 
 </body>
 </html>
