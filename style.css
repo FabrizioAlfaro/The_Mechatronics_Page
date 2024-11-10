@@ -39,43 +39,25 @@ header {
 }
 
 /* Navigation Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-
-/* Reorder the elements */
-.nav-links {
-    order: 1;
-    margin-right: auto; /* Pushes nav-links to the left */
-}
-
-.logo {
-    order: 2;
-}
-
-.search-bar-container {
-    order: 3;
-}
-
-/* Existing nav-links styles */
-.nav-links {
-    display: flex;
+nav ul {
     list-style: none;
-    gap: 2rem;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
     margin: 0;
-    padding: 0;
 }
 
-.nav-links li a {
+nav ul li a {
+    color: #00bcd4;
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
+nav ul li a:hover {
     color: #ff5722;
     transform: scale(1.1);
 }
